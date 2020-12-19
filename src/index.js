@@ -9,8 +9,3 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
-
-
-
-
-// spotify clientId -03cf82a30fde4e149732ddda7726962c
