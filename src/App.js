@@ -3,7 +3,8 @@ import './App.css';
 import Login from "./components/Login/Login";
 import { getTokenFromResponse } from './spotify';
 import SpotifyWebApi from 'spotify-web-api-js';
-import {useDataLayerValue} from './Context/DataLayer'
+import {useDataLayerValue} from './Context/DataLayer';
+import HomePage from './components/HomePage/HomePage';
 
 const spotify = new SpotifyWebApi();
 function App() {
@@ -30,13 +31,11 @@ function App() {
     }
   }, []);
 
-  console.log(token);
-  console.log(user);
   return (
     <div className="app">
       {
         token ? (
-           <h1>Logged In</h1>
+           <HomePage />
           ) : (
             <Login />
           )
