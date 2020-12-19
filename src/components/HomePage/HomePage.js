@@ -1,9 +1,16 @@
 import React from 'react'
+import Footer from '../Footer/Footer';
+import MainInfo from '../MainInfo/MainInfo';
+import Sidebar from '../Sidebar/Sidebar';
 import './HomePage.scss';
 const HomePage = () => {
     return (
         <div>
-            <h1>Welcome to Home Page</h1>
+            <div>
+                <Sidebar />
+                <MainInfo />
+            </div>
+            <Footer />
         </div>
     )
 }
