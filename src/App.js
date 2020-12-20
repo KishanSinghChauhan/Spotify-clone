@@ -8,7 +8,7 @@ import HomePage from './components/HomePage/HomePage';
 
 const spotify = new SpotifyWebApi();
 function App() {
-  const [{user,token},dispatch] = useDataLayerValue();
+  const [{token},dispatch] = useDataLayerValue();
   useEffect(() => {
     const hash = getTokenFromResponse();
     window.location.hash = '';
@@ -28,6 +28,12 @@ function App() {
           user:user
         })
       })
+      spotify.getUserPlaylists().then((playlists) => {
+        dispatch({
+          type:'SET_PLAYLISTS',
+          playlists:playlists
+        })
+      })
     }
   }, []);
 
@@ -35,7 +41,7 @@ function App() {
     <div className="app">
       {
         token ? (
-           <HomePage />
+           <HomePage spotify={spotify}/>
           ) : (
             <Login />
           )
