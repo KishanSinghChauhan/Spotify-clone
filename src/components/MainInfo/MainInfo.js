@@ -1,11 +1,13 @@
-import React from 'react'
-import './MainInfo.scss';
-const MainInfo = () => {
-    return (
-        <div>
-            <h1>Main Info</h1>
-        </div>
-    )
+import React from "react";
+import "./MainInfo.scss";
+import Header from "./Header/Header";
+
+const MainInfo = ({ spotify }) => {
+  return (
+    <div className="main">
+      <Header spotify={spotify} />
+    </div>
+  );
 }
 
-export default MainInfo
+export default MainInfo;
