@@ -8,8 +8,6 @@ import { useStateValue } from "../../Context/DataLayer";
 
 const Sidebar = () => {
   const [{ playlists }] = useStateValue();
-  console.log(playlists);
-
   return (
     <div className="sidebar">
       <img
