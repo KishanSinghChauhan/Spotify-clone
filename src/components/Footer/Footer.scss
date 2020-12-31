@@ -12,6 +12,7 @@
 .footer__right * .MuiSlider-root {
   color: green;
 }
+
 .footer__left {
   display: flex;
   align-items: center;
@@ -55,10 +56,10 @@
   object-fit: contain;
 }
 
-.footer__songInfo > h4 {
+.footer__songInfo>h4 {
   margin-bottom: 5px;
 }
 
-.footer__songInfo > p {
+.footer__songInfo>p {
   font-size: 12px;
 }

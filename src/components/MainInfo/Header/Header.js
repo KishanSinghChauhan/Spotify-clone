@@ -1,9 +1,12 @@
 import React from "react";
 import "./Header.scss";
+import { useStateValue } from "../../../Context/DataLayer";
 import { Avatar } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
+import { useEffect } from "react";
 
 const Header = ({ spotify }) => {
+  const [{ user }, dispatch] = useStateValue();
 
   return (
     <div className="header">
@@ -15,8 +18,8 @@ const Header = ({ spotify }) => {
         />
       </div>
       <div className="header__right">
-        <Avatar alt='' src='' />
-        <h4>my name</h4>
+        <Avatar alt={user?.display_name} src={user?.images[0]?display_name.uri} />
+        <h4>{user?.display_name}</h4>
       </div>
     </div>
   );

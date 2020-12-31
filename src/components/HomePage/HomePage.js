@@ -4,10 +4,10 @@ import "./HomePage.scss";
 import Sidebar from "../Sidebar/Sidebar";
 import MainInfo from "../MainInfo/MainInfo";
 
-const  HomePage = ({ spotify }) => {
+const HomePage = ({ spotify }) => {
   return (
-    <div className="home">
-      <div className="home_body">
+    <div className="player">
+      <div className="player__body">
         <Sidebar />
         <MainInfo spotify={spotify} />
       </div>

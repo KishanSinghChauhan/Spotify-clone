@@ -4,10 +4,11 @@ import SidebarOption from "./SidebarOption/SidebarOption";
 import HomeIcon from "@material-ui/icons/Home";
 import SearchIcon from "@material-ui/icons/Search";
 import LibraryMusicIcon from "@material-ui/icons/LibraryMusic";
-import { useDataLayerValue } from "../../Context/DataLayer";
+import { getTokenFromResponse } from "../../spotify";
+import { useStateValue } from "../../Context/DataLayer";
 
-function Sidebar() {
-  const [{ playlists }, dispatch] = useDataLayerValue();
+const Sidebar = () => {
+  const [{ playlists }, dispatch] = useStateValue();
   console.log(playlists);
 
   return (
