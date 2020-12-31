@@ -6,8 +6,8 @@ import MainInfo from "../MainInfo/MainInfo";
 
 const HomePage = ({ spotify }) => {
   return (
-    <div className="player">
-      <div className="player__body">
+    <div className="home">
+      <div className="home_body">
         <Sidebar />
         <MainInfo spotify={spotify} />
       </div>
